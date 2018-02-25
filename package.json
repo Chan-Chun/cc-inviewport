@@ -1,0 +1,19 @@
+{
+  "name": "cc-inviewport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chan-Chun/cc-inviewport.git"
+  },
+  "author": "Chan-Chun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chan-Chun/cc-inviewport/issues"
+  },
+  "homepage": "https://github.com/Chan-Chun/cc-inviewport#readme"
+}
