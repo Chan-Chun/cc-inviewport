@@ -1,10 +1,12 @@
 module.exports = (element, offset) => {
-  if (!element) {
+  if (!element && !window) {
     return
   }
-  let mainOffsetTop = element.scrollTop
+  console.log(element)
+  let mainOffsetTop = element.offsetTop
   let mainHeight = element.offsetHeight
-  let winHeight = window.body.scrollHeight
-  let winScrollTop = window.body.scrollTop
+  let winHeight = window.innerHeight
+  let winScrollTop = document.body.scrollTop + document.documentElement.scrollTop
+  console.log(mainOffsetTop, mainHeight, winHeight, winScrollTop)
   return !(winScrollTop > mainOffsetTop + mainHeight || winScrollTop < mainOffsetTop - winHeight)
 }

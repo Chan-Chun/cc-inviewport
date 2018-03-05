@@ -6,6 +6,9 @@
   <script src="../dist/cc-inviewport.js"></script>
 </head>
 <style>
+  body {
+    margin: 0;
+  }
   .test-block {
     background: red;
     width: 250px;
@@ -17,11 +20,21 @@
   <div class="test-block"></div>
   <div class="test-block"></div>
   <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
   <script>
     if (window.cc_inviewport) {
       const blocks = document.querySelectorAll('.test-block')
       blocks.forEach(item => {
-        console.log(item)
         console.log(cc_inviewport(item, 0))
       })
     }
