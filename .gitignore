@@ -1,0 +1,10 @@
+dist
+build
+node_modules
+.DS_Store
+npm-debug.log
+.idea/*
+Thumbs.db
+.project
+*.sw*
+*.un~

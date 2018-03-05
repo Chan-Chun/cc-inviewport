@@ -1,0 +1,8 @@
+node_modules
+.travis.yml
+.drone.yml
+Makefile
+.jshintrc
+.jshintignore
+*.sw*
+*.un~

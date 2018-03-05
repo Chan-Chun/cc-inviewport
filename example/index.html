@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test-cc-inviewport</title>
+  <script src="../dist/cc-inviewport.js"></script>
+</head>
+<style>
+  .test-block {
+    background: red;
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+  }
+</style>
+<body>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <div class="test-block"></div>
+  <script>
+    if (window.cc_inviewport) {
+      const blocks = document.querySelectorAll('.test-block')
+      blocks.forEach(item => {
+        console.log(item)
+        console.log(cc_inviewport(item, 0))
+      })
+    }
+  </script>
+</body>
+</html>
