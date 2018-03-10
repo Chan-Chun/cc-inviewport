@@ -1,12 +1,15 @@
-module.exports = (element, offset) => {
+module.exports = (element, offset = 0) => {
   if (!element && !window) {
+    throw new Error('Please running in browser')
     return
   }
-  console.log(element)
+  if (typeof offset !== 'number') {
+    throw new Error('Offset is\'t number')
+    return
+  }
   let mainOffsetTop = element.offsetTop
   let mainHeight = element.offsetHeight
   let winHeight = window.innerHeight
-  let winScrollTop = document.body.scrollTop + document.documentElement.scrollTop
-  console.log(mainOffsetTop, mainHeight, winHeight, winScrollTop)
-  return !(winScrollTop > mainOffsetTop + mainHeight || winScrollTop < mainOffsetTop - winHeight)
+  let winScrollTop = window.document.body.scrollTop + window.document.documentElement.scrollTop
+  return !(winScrollTop > mainOffsetTop + mainHeight + offset || winScrollTop + offset < mainOffsetTop - winHeight)
 }

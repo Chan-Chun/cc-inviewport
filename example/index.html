@@ -35,7 +35,7 @@
     if (window.cc_inviewport) {
       const blocks = document.querySelectorAll('.test-block')
       blocks.forEach(item => {
-        if (cc_inviewport(item, 0)) {
+        if (cc_inviewport(item)) {
           item.style.background = 'green'
         }
       })
