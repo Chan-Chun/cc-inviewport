@@ -1,13 +1,14 @@
 {
   "name": "cc-inviewport",
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "",
-  "main": "dist/cc-inviewport.js",
+  "main": "dist/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p --mode production",
+    "build": "webpack -p --mode production && babel src/ --out-dir dist/ -D",
     "dev": "webpack -w --mode development",
-    "server": "webpack-dev-server --mode development"
+    "server": "webpack-dev-server --mode development",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Chan-Chun/cc-inviewport#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
