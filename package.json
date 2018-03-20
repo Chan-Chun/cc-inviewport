@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p --mode production && BABEL_ENV=production babel src/ --out-dir dist/ -D",
     "dev": "webpack -w --mode development",
-    "server": "webpack-dev-server --mode development",
-    "prepublish": "npm run build"
+    "server": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
