@@ -1,12 +1,14 @@
 const path = require('path')
-const name = require('./package').name.replace(/-/g, '_');
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
-    filename: 'cc-inviewport.js',
-    path: path.join(__dirname, "build"),
-    library: name
+    filename: 'inviewport.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'inviewport',
+    libraryTarget: 'umd',
+    libraryExport: 'default',
+    publicPath: '/dist'
   },
   module: {
     rules: [

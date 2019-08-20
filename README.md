@@ -4,11 +4,11 @@
 
 To determine whether the HTMLElement is in the viewport.
 
+ 
 
+### Installation
 
-### Usage
-
-#### Npm
+#### CommonJS
 
 ##### Install
 
@@ -16,30 +16,51 @@ To determine whether the HTMLElement is in the viewport.
 npm install cc-inviewport --save
 ```
 
-##### Code
 
-```javascript
-const inviewport = require('cc-inviewport');
-inviewport(HTMLElement);
+
+#### ES6
+
+##### Install
+
+```shell
+npm install cc-inviewport --save
 ```
 
 
 
-#### Unpkg
+#### Script
 
 ##### Install
 
 ```javascript
-//unpkg.com/cc-inviewport/build/cc-inviewport.js
+<script src="https://unpkg.com/cc-inviewport/dist/inviewport.js"></script>
 ```
+
+> inviewport is registered in window
+
+
+
+## syntax
 
 ##### Code
 
 ```Javascriprt
-cc_inviewport(HTMLElement);
+inviewport(HTMLElement, offset);
 ```
 
-> cc_inviewport is registered in winodw
+##### Parameters
+
+* *HTMLElement*
+
+HTML element
+
+* *offset*
+
+horizontal offset
+
+
+
+
 
 
 

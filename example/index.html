@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>test-cc-inviewport</title>
-  <script src="../dist/cc-inviewport.js"></script>
+  <title>cc-inviewport</title>
+  <script src="/dist/inviewport.js"></script>
 </head>
 <style>
   body {
     margin: 0;
   }
+
   .test-block {
     background: red;
     width: 250px;
@@ -32,14 +33,12 @@
   <div class="test-block"></div>
   <div class="test-block"></div>
   <script>
-    if (window.cc_inviewport) {
-      const blocks = document.querySelectorAll('.test-block')
-      blocks.forEach(item => {
-        if (cc_inviewport.default(item)) {
-          item.style.background = 'green'
-        }
-      })
-    }
+    const blocks = document.querySelectorAll('.test-block')
+    blocks.forEach(item => {
+      if (inviewport(item)) {
+        item.style.background = 'yellow'
+      }
+    })
   </script>
 </body>
 </html>
